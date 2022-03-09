@@ -1,0 +1,7 @@
+.aside__accordion_active:hover {
+    background-color: #ccc;
+}
+
+.aside__accordion_active:after {
+    content: "\2212";
+}
