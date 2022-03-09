@@ -8,8 +8,40 @@
 </head>
 <body class="root">
     <div class="page">
-        <header style="grid-area: header;"></header>
-        <nav style="grid-area: navigation;"></nav>
+        <header class="header">
+            <a class="header__link" target="_blank" href="#">Учебная платформа</a>
+            <nav class="menu">
+                <ul class="menu__items">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            <img class="menu__icon" src="./src/images/logo-courses.svg" alt="Курсы">Курсы
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            <img class="menu__icon" src="./src/images/logo-profile.svg" alt="Профиль">Профиль
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="breadcrumbs">
+            <li class="breadcrumb">
+                <a href="#" class="breadcrumb-base">Курсы</a>
+                <img src="./src/images/icon-vector.svg" alt=">">
+            </li>
+            <li class="breadcrumb">
+                <a href="#" class="breadcrumb-base">Кинологическое направление</a>
+                <img src="./src/images/icon-vector.svg" alt=">">
+            </li>
+            <li class="breadcrumb">
+                <a href="#" class="breadcrumb-base">Работа &laquo;второго номера&raquo; совместно со следовым кинологическим расчётом</a>
+                <img src="./src/images/icon-vector.svg" alt=">">
+            </li>
+            <li class="breadcrumb">
+                <a href="#" class="breadcrumb-base breadcrumb-base_active">Тест</a>
+            </li>
+        </nav>
         <main class="main-content">
             <div class="content-block">
                 <h2 class="content-block__title">Курс завершен</h2>
@@ -17,7 +49,6 @@
         </main>
         <aside style="grid-area: sidebar;"></aside>
     </div>
-    
-    
+
 </body>
 </html>
