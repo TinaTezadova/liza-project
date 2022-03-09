@@ -1,9 +1,3 @@
 .breadcrumb-base_active {
     color: #9397A3;
 }
-
-.breadcrumb-base_active::after {
-    content: "" !important;
-    /* important - костыль которую нужно исправить. За неё баллы не дадут для победы.
-    .breadcrumbs-base::after:not(:last-of-type) - попробовал но не сработало*/
-}
