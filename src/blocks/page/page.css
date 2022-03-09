@@ -1,0 +1,15 @@
+.page {
+    display: grid;
+    grid-template-columns: 36px 872px 424px 36px;
+    grid-template-areas:
+        "header header header header"
+        ". navigation navigation . "
+        ". main-content sidebar .";
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    column-gap: 24px;
+    box-sizing: border-box;
+    padding: 0;
+    padding-bottom: 97px;
+}
