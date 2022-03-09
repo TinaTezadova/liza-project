@@ -1,0 +1,4 @@
+.video__ui {
+    display: flex;
+    justify-content: space-between;
+}
