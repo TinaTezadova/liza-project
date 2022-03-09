@@ -1,0 +1,4 @@
+.breadcrumb {
+    list-style: none;
+    display: flex;
+}
