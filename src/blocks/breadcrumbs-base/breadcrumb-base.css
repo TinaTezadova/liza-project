@@ -1,0 +1,16 @@
+.breadcrumb-base {
+	font-family: Golos, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #212329;
+    text-decoration: none;
+    position: relative;
+}
+
+.breadcrumb-base::after {
+    content: url(../../images/Vector.svg);
+    position: absolute;
+    padding-left: 9px;
+}
