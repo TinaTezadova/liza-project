@@ -1,21 +1,23 @@
 .aside__accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: transparent;
     cursor: pointer;
-    padding: 18px;
+    padding-top: 32px;
+    margin-top: 33px;
     width: 100%;
-    border: 1px solid #E6E7EB;
+    border: none;
+    border-top: 1px solid #E6E7EB;
     text-align: left;
     outline: none;
     font-size: 15px;
-}
-
-.aside__accordion:hover {
-    background-color: #ccc;
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #212329;
 }
 
 .aside__accordion:after {
-    content: '\002B';
+    content: url(../../../images/vector-down.svg);
     color: #777;
     font-weight: bold;
     float: right;

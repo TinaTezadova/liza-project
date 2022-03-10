@@ -1,7 +1,3 @@
-.aside__accordion_active:hover {
-    background-color: #ccc;
-}
-
 .aside__accordion_active:after {
-    content: "\2212";
+    content: url(../../../../images/vector-up.svg);
 }
