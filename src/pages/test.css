@@ -26,3 +26,22 @@
 @import url(../blocks/breadcrumbs-base/_active/breadcrumb-base_active.css);
 @import url(../blocks/breadcrumb/breadcrumb.css);
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
+
+
+@import url(../blocks/test/test.css);
+@import url(../blocks/test/__list/test__list.css);
+@import url(../blocks/test/__item/test__item.css);
+@import url(../blocks/test/__button/test__button.css);
+@import url(../blocks/test/__button/_disabled/test__button_disabled.css);
+@import url(../blocks/test/__question/test__question.css);
+
+@import url(../blocks/answer-options/answer-options.css);
+@import url(../blocks/answer-options/__list/answer-options__list.css);
+@import url(../blocks/answer-options/__item/answer-options__item.css);
+@import url(../blocks/answer-options/__checkbox-img/answer-options__checkbox-img.css);
+@import url(../blocks/answer-options/__checkbox-input/answer-options__checkbox-input.css);
+@import url(../blocks/answer-options/__checkbox-label/answer-options__checkbox-label.css);
+@import url(../blocks/answer-options/__checkbox-label/_checked/answer-options__checkbox-label_checked.css);
+@import url(../blocks/answer-options/__checkbox-state/answer-options__checkbox-state.css);
+@import url(../blocks/answer-options/__checkbox/answer-options__checkbox.css);
+

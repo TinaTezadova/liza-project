@@ -1,0 +1,10 @@
+.test__question {
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #212329;
+    margin-block-start: 0;
+    margin-block-end: 16px;
+}

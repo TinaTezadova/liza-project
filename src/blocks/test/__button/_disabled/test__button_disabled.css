@@ -1,0 +1,5 @@
+.test__button_disabled {
+    background-color: #E6E7EB;
+    cursor: default;
+    color: #9397A3;
+}

@@ -50,11 +50,118 @@
                     <h2 class="content-block__title">Тест</h2>
                     <a href="./about-test.html" class="content-block__link">Посмотреть&nbsp;условия</a>
                 </div>
+                <section class="test">
+                    <ul class="test__list">
+                      <!--   <li class="test__item">
+                            <p class="test__question">1.&nbsp;В&nbsp;каких случаях перспективно применение следовых кинологических расчётов?</p>
+                            <ul class="answer-options__list">
+                                <li class="answer-options__item">
+                                    <label class="answer-options__checkbox">
+                                        <input type="checkbox" class="answer-options__checkbox-input">
+                                        <div class="answer-options__checkbox-state">
+                                            <img src="./src/images/checkbox.svg" alt="Чекбокс" class="answer-options__checkbox-img">
+                                            <div class="answer-options__checkbox-label">Оказание помощи гражданам, оказавшимся в&nbsp;зонах бедствия или пропавшим в&nbsp;безлюдной местности</div>
+                            
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="answer-options__item">
+                                    <label class="answer-options__checkbox">
+                                        <input type="checkbox" class="answer-options__checkbox-input">
+                                        <div class="answer-options__checkbox-state">
+                                            <img src="./src/images/checkbox.svg" alt="Чекбокс" class="answer-options__checkbox-img">
+                                            <div class="answer-options__checkbox-label">Обучение животного идти как по&nbsp;горячему, так и&nbsp;по&nbsp;остывшему следу</div>
+                            
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="answer-options__item">
+                                    <label class="answer-options__checkbox">
+                                        <input type="checkbox" class="answer-options__checkbox-input">
+                                        <div class="answer-options__checkbox-state">
+                                            <img src="./src/images/checkbox.svg" alt="Чекбокс" class="answer-options__checkbox-img">
+                                            <div class="answer-options__checkbox-label">Поиск тел и&nbsp;их&nbsp;остатков с&nbsp;применением специально обученных собак</div>
+                            
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                            
+
+                        </li>
+
+                        <li class="test__item">
+                            <p class="test__question">2. С&nbsp;какого возраста следует начинать дрессировку по&nbsp;курсу ПСС?</p>
+                            <ul class="answer-options__list">
+                                <li class="answer-options__item">
+                                    <label class="answer-options__checkbox">
+                                        <input type="radio" class="answer-options__checkbox-input">
+                                        <div class="answer-options__checkbox-state">
+                                            <img src="./src/images/radio.svg" alt="Чекбокс" class="answer-options__checkbox-img">
+                                            <div class="answer-options__checkbox-label">6 месяцев</div>
+                            
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="answer-options__item">
+                                    <label class="answer-options__checkbox">
+                                        <input type="radio" class="answer-options__checkbox-input">
+                                        <div class="answer-options__checkbox-state">
+                                            <img src="./src/images/radio.svg" alt="Чекбокс" class="answer-options__checkbox-img">
+                                            <div class="answer-options__checkbox-label">1–1,5 года</div>
+                            
+                                        </div>
+                                    </label>
+                                </li>
+
+                                <li class="answer-options__item">
+                                    <label class="answer-options__checkbox">
+                                        <input type="radio" class="answer-options__checkbox-input">
+                                        <div class="answer-options__checkbox-state">
+                                            <img src="./src/images/radio.svg" alt="Чекбокс" class="answer-options__checkbox-img">
+                                            <div class="answer-options__checkbox-label">3 года</div>
+                            
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                            
+
+                        </li> -->
+                    </ul>
+
+                    <a href="#" class="test__button test__button_disabled">Показать результат</a>
+
+                </section>
+                
 
             </div>
         </main>
         <aside style="grid-area: sidebar;"></aside>
     </div>
+
+    <template id='test__item-template'>
+        <li class="test__item">
+            <p class="test__question"></p>
+            <ul class="answer-options__list"></ul>
+        </li>
+    </template>
+
+    <template id='answer-options__item-template'>
+        <li class="answer-options__item">
+            <label class="answer-options__checkbox">
+                <input type="checkbox" class="answer-options__checkbox-input">
+                <div class="answer-options__checkbox-state">
+                    <img src="./src/images/checkbox.svg" alt="Чекбокс" class="answer-options__checkbox-img">
+                    <div class="answer-options__checkbox-label"></div>
+                </div>
+            </label>
+        </li>
+    </template>
+    <script src="./src/scripts/test.js"></script>
 </body>
 
 </html>

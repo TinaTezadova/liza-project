@@ -1,0 +1,7 @@
+.answer-options__item {
+    margin-bottom: 16px;
+}
+
+.answer-options__item:last-child {
+    margin-bottom: 32px;
+}
