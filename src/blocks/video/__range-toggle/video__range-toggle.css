@@ -1,0 +1,9 @@
+.video__range-toggle {
+    position: absolute;
+    left: 0;
+    top: -9px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+}

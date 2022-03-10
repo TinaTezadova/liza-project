@@ -43,3 +43,10 @@
 @import url(../blocks/content-block/__title/content-block__title.css);
 @import url(../blocks/video/video.css);
 @import url(../blocks/video/video__ui/video__ui.css);
+@import url(../blocks/video/__range-scale/_type/video__range-scale_type_video.css);
+@import url(../blocks/video/__range-scale/video__range-scale.css);
+@import url(../blocks/video/__range-scale/_type/video__range-scale_type_audio.css);
+@import url(../blocks/video/__range-toggle/video__range-toggle.css);
+@import url(../blocks/video/__range-toggle/_active/video__range-toggle_active.css);
+@import url(../blocks/video/__range-bar/video__range-bar.css);
+@import url(../blocks/video/__audio-container-range/video__audio-container-range.css);
