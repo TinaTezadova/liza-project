@@ -1,0 +1,11 @@
+.action-panel__button {
+    width: 184px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}

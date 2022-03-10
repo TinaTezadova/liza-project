@@ -1,0 +1,9 @@
+.action-panel__button-next {
+    background-color: #FF6600;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

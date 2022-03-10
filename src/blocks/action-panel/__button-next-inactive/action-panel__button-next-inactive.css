@@ -1,0 +1,8 @@
+.action-panel__button-next-inactive {
+    color: #9397A3;
+    background-color: #E6E7EB;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

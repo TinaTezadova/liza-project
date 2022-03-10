@@ -26,3 +26,12 @@
 @import url(../blocks/breadcrumbs-base/_active/breadcrumb-base_active.css);
 @import url(../blocks/breadcrumb/breadcrumb.css);
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
+
+/* action-panel*/
+@import url(../blocks/action-panel/__button-next/action-panel__button-next.css);
+@import url(../blocks/action-panel/__button-previous/action-panel__button-previous.css);
+@import url(../blocks/action-panel/__button/action-panel__button.css);
+@import url(../blocks/action-panel/__previous-img/action-panel__previous-img.css);
+@import url(../blocks/action-panel/action-panel.css);
+@import url(../blocks/action-panel/__next-img/action-panel__next-img.css);
+@import url(../blocks/action-panel/__button-next-inactive/action-panel__button-next-inactive.css);
