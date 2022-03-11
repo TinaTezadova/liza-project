@@ -7,3 +7,8 @@
     align-items: center;
     justify-content: center;
 }
+
+.action-panel__button-previous:hover {
+	border: 1px #ff6600 solid;
+	transform: scale(1.008);
+}
