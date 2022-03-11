@@ -1,0 +1,9 @@
+.video {
+    background-color: #212329;
+    min-height: 392px;
+    border-radius: 8px;
+    margin-top: 32px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column-reverse;
+}
