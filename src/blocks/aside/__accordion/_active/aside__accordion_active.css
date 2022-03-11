@@ -1,0 +1,3 @@
+.aside__accordion_active:after {
+    content: url(../../../../images/vector-up.svg);
+}
