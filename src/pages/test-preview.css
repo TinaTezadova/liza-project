@@ -21,9 +21,9 @@
 @import url(../blocks/menu/__link/_active/menu__link_active.css);
 
 /* breadcrumbs */
-@import url(../blocks/breadcrumbs-base/breadcrumb-base.css);
-@import url(../blocks/breadcrumbs-base/_active/breadcrumb-base_active.css);
-@import url(../blocks/breadcrumb/breadcrumb.css);
+@import url(../blocks/breadcrumbs/__breadcrumb/breadcrumbs__breadcrumb.css);
+@import url(../blocks/breadcrumbs/__breadcrumbs-base/breadcrumbs__breadcrumb-base.css);
+@import url(../blocks/breadcrumbs/__breadcrumbs-base/_active/breadcrumbs__breadcrumb-base_active.css);
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
 
 /* aside */
