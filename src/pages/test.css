@@ -32,6 +32,7 @@
 @import url(../blocks/test/__list/test__list.css);
 @import url(../blocks/test/__item/test__item.css);
 @import url(../blocks/test/__button/test__button.css);
+@import url(../blocks/test/__button/_success/test__button_success.css);
 @import url(../blocks/test/__button/_disabled/test__button_disabled.css);
 @import url(../blocks/test/__question/test__question.css);
 

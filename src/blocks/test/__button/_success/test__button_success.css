@@ -1,0 +1,10 @@
+.test__button_success {
+    background-color: #FFFFFF;
+    color: #FF6600;
+    border: 1.2px solid #E6E7EB;
+}
+
+.test__button_success:hover {
+    border-color: #FF6600;
+
+}

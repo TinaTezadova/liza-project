@@ -3,7 +3,9 @@ const radioImgUrl = './src/images/radio.svg';
 const checkboxImgUrl = './src/images/checkbox.svg';
 const checkboxActiveImgUrl = './src/images/checkbox-active.svg';
 const testItems = Array.from(document.querySelectorAll('.test__item'));
-const button = document.querySelector('.test__button');
+const retryButtonFailedTemplate = '<img src="./src/images/refresh-icon.svg" alt="Иконка обновления">Пересдать';
+const retryButtonSuccessTemplate = '<img src="./src/images/refresh-orange.svg" alt="Иконка обновления">Пересдать';
+const form = document.querySelector('.test')
 const testContainer = document.querySelector('.test__list');
 const testItemTemplate = document.querySelector('#test__item-template').content;
 const optionsItemTemplate = document.querySelector('#answer-options__item-template').content;
@@ -76,13 +78,14 @@ const handleCheckboxClick = (event, answerOptionsList) => {
 };
 
 const isButtonActive = () => {
+    const button = document.querySelector('.test__button');
     const testItems = Array.from(document.querySelector('.test__list').children);
     const active = testItems.every((item) => {
         const inputs = Array.from(item.querySelectorAll('.answer-options__checkbox-input'));
         return inputs.filter((item) => item.checked).length > 0
     });
     active ? button.removeAttribute('disabled') : button.setAttribute('disabled', 'true');
-}
+};
 
 const createOptionsItem = (option, checkboxType, answerOptionsList) => {
     const optionsItem = optionsItemTemplate.querySelector('.answer-options__item').cloneNode(true);
@@ -122,9 +125,29 @@ function createQuestionItem(question) {
 
 };
 
+const insertInitialButton = () => {
+    testContainer.after(renderFormButton('Показать результат', true, checkTestResult, []));
+};
+
+const insertInitialQuestions = () => {
+    initialQuestions.forEach(el => testContainer.append(createQuestionItem(el)));
+};
+
+const handleRetryButtonClick = (event) => {
+    event.preventDefault();
+    const button = document.querySelector('.test__button');
+    testContainer.innerHTML = '';
+    button.remove();
+    insertInitialQuestions();
+    insertInitialButton();
+
+};
+
+
 const checkTestResult = (event) => {
     event.preventDefault()
     const testItems = Array.from(document.querySelector('.test__list').children);
+    const button = document.querySelector('.test__button');
     const inputsFirstQuestion = Array.from(testItems[0].querySelectorAll('.answer-options__checkbox-input'));
     const inputsSecondQuestion = Array.from(testItems[1].querySelectorAll('.answer-options__checkbox-input'));
     const inputs = [...inputsFirstQuestion, ...inputsSecondQuestion]
@@ -154,14 +177,29 @@ const checkTestResult = (event) => {
                     img.src = './src/images/error.svg';
                 }
             }
-        })
+        });
+        if(testSuccess) {
+            form.replaceChild(renderFormButton(retryButtonSuccessTemplate, false, handleRetryButtonClick, ['test__button_success']), button);
+        }
+        else {
+            form.replaceChild(renderFormButton(retryButtonFailedTemplate, false, handleRetryButtonClick,), button);
+        }
+        
 
 }
 
+const renderFormButton = (children, disabled, callback, classes= []) => {
+    const newButton = document.createElement('button');
+    newButton.type = 'submit';
+    newButton.classList.add('test__button', ...classes);
+    newButton.innerHTML = children;
+    newButton.addEventListener('click', callback);
+    disabled ? newButton.setAttribute('disabled', 'true') : newButton.removeAttribute('disabled');
+    return newButton
+};
 
 
-initialQuestions.forEach(el => testContainer.append(createQuestionItem(el)));
-
-button.addEventListener('click', checkTestResult)
+insertInitialQuestions();
+insertInitialButton();
 
 

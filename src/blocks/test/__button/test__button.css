@@ -1,4 +1,6 @@
 .test__button {
+    display: flex;
+    gap: 8px;
     box-sizing: border-box;
     padding: 12px 24px;
     background-color: #FF6600;
@@ -11,6 +13,7 @@
     cursor: pointer;
     text-align: center;
     align-self: center;
+    border: none;
 }
 
 .test__button:disabled {
