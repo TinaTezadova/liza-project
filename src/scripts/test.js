@@ -14,14 +14,17 @@ const initialQuestions = [
         options: [
             {
                 id: 1,
+                success: true,
                 text: 'Оказание помощи гражданам, оказавшимся в зонах бедствия или пропавшим в безлюдной местности'
             },
             {
                 id: 2,
+                success: true,
                 text: 'Обучение животного идти как по горячему, так и по остывшему следу'
             },
             {
                 id: 3,
+                success: true,
                 text: 'Поиск тел и их остатков с применением специально обученных собак'
             }
         ]
@@ -33,14 +36,17 @@ const initialQuestions = [
         options: [
             {
                 id: 1,
+                success: false,
                 text: '6 месяцев'
             },
             {
                 id: 2,
+                success: true,
                 text: '1–1,5 года'
             },
             {
                 id: 3,
+                success: false,
                 text: '3 года'
             },
         ]
@@ -75,23 +81,7 @@ const isButtonActive = () => {
         const inputs = Array.from(item.querySelectorAll('.answer-options__checkbox-input'));
         return inputs.filter((item) => item.checked).length > 0
     });
-    const inputsFirstQuestion = Array.from(testItems[0].querySelectorAll('.answer-options__checkbox-input'));
-    const inputsSecondQuestion = Array.from(testItems[1].querySelectorAll('.answer-options__checkbox-input'));
-    const testSuccess = (inputsFirstQuestion.filter((item) => item.checked).length > 1) 
-    && (inputsSecondQuestion.filter((item) => item.checked && item.value === '2').length > 0);
-
-    if(active && testSuccess) {
-        button.href = "./test-success.html";
-        button.classList.remove("test__button_disabled");
-    }
-    else if (active && !testSuccess) {
-        button.href = "./test-failed.html";
-        button.classList.remove("test__button_disabled");
-    }
-    else {
-        button.href = "#";
-        button.classList.add("test__button_disabled");
-    }
+    active ? button.removeAttribute('disabled') : button.setAttribute('disabled', 'true');
 }
 
 const createOptionsItem = (option, checkboxType, answerOptionsList) => {
@@ -102,6 +92,7 @@ const createOptionsItem = (option, checkboxType, answerOptionsList) => {
 
     optionsItemLabel.textContent = option.text;
     checkboxInput.setAttribute('value', option.id);
+    checkboxInput.setAttribute('success', option.success);
 
     if (checkboxType === 'radio') {
         checkboxInput.type = 'radio';
@@ -131,8 +122,46 @@ function createQuestionItem(question) {
 
 };
 
+const checkTestResult = (event) => {
+    event.preventDefault()
+    const testItems = Array.from(document.querySelector('.test__list').children);
+    const inputsFirstQuestion = Array.from(testItems[0].querySelectorAll('.answer-options__checkbox-input'));
+    const inputsSecondQuestion = Array.from(testItems[1].querySelectorAll('.answer-options__checkbox-input'));
+    const inputs = [...inputsFirstQuestion, ...inputsSecondQuestion]
+    const testSuccess = (inputsFirstQuestion.filter((item) => item.checked).length > 1) 
+    && (inputsSecondQuestion.filter((item) => item.checked && item.value === '2').length > 0);
+
+        inputs.forEach((item) => {
+            const img = item.nextSibling.nextSibling.querySelector('.answer-options__img');
+            const label = item.nextSibling.nextSibling.querySelector('.answer-options__label');
+
+            item.setAttribute('disabled', 'true');
+            if (item.checked) {
+                if(item.getAttribute('success') === 'true') {
+                    img.src = './src/images/success-icon.svg';
+                    label.classList.add('answer-options__label_success');
+                }
+                else {
+                    img.src = './src/images/faild-icon.svg';
+                    label.classList.add('answer-options__label_failed');
+                }
+            }
+            else {
+                if(item.getAttribute('success') === 'true') {
+                    img.src = './src/images/success.svg';
+                }
+                else {
+                    img.src = './src/images/error.svg';
+                }
+            }
+        })
+
+}
+
 
 
 initialQuestions.forEach(el => testContainer.append(createQuestionItem(el)));
+
+button.addEventListener('click', checkTestResult)
 
 

@@ -44,4 +44,7 @@
 @import url(../blocks/answer-options/__label/_checked/answer-options__label_checked.css);
 @import url(../blocks/answer-options/__checkbox-state/answer-options__checkbox-state.css);
 @import url(../blocks/answer-options/__checkbox/answer-options__checkbox.css);
+@import url(../blocks/answer-options/__item/_result/answer-options__item_result.css);
+@import url(../blocks/answer-options/__label/_success/answer-options__label_success.css);
+@import url(../blocks/answer-options/__label/_failed/answer-options__label_failed.css);
 

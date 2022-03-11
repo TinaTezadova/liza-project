@@ -4,3 +4,7 @@
     opacity: 0;
     outline: none;
 }
+
+.answer-options__checkbox-input:disabled {
+    cursor: none;
+}
