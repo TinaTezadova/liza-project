@@ -11,6 +11,10 @@
 @import url(../blocks/content-block/__header/content-block__header.css);
 @import url(../blocks/content-block/__title/content-block__title.css);
 @import url(../blocks/content-block/__link/content-block__link.css);
+@import url(../blocks/result/result.css);
+@import url(../blocks/result/__title/result__title.css);
+@import url(../blocks/result/__subtitle/result__subtitle.css);
+@import url(../blocks/result/_theme/result_theme_fail.css);
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__link/header__link.css);
