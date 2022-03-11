@@ -55,13 +55,13 @@ const handleCheckboxClick = (event, answerOptionsList) => {
         const radioCheckboxes = Array.from(answerOptionsList.querySelectorAll('input[type=radio]'));
         radioCheckboxes.forEach((item) => {
             item.nextSibling.nextSibling.children[0].src = radioImgUrl;
-            item.nextSibling.nextSibling.children[1].classList.remove('answer-options__checkbox-label_checked');
+            item.nextSibling.nextSibling.children[1].classList.remove('answer-options__label_checked');
         });
-        label.classList.add('answer-options__checkbox-label_checked');
+        label.classList.add('answer-options__label_checked');
         img.src = radioActiveImgUrl;
     }
     else {
-        label.classList.toggle('answer-options__checkbox-label_checked');
+        label.classList.toggle('answer-options__label_checked');
         event.target.checked ? img.src = checkboxActiveImgUrl : img.src = checkboxImgUrl;
     }
 
@@ -96,8 +96,8 @@ const isButtonActive = () => {
 
 const createOptionsItem = (option, checkboxType, answerOptionsList) => {
     const optionsItem = optionsItemTemplate.querySelector('.answer-options__item').cloneNode(true);
-    const optionsItemLabel = optionsItem.querySelector('.answer-options__checkbox-label');
-    const checkboxImg = optionsItem.querySelector('.answer-options__checkbox-img');
+    const optionsItemLabel = optionsItem.querySelector('.answer-options__label');
+    const checkboxImg = optionsItem.querySelector('.answer-options__img');
     const checkboxInput = optionsItem.querySelector('.answer-options__checkbox-input');
 
     optionsItemLabel.textContent = option.text;
