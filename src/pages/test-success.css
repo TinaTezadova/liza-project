@@ -31,6 +31,16 @@
 @import url(../blocks/breadcrumbs/__breadcrumbs-base/_active/breadcrumbs__breadcrumb-base_active.css);
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
 
+/* action-panel*/
+@import url(../blocks/action-panel/__button-next/action-panel__button-next.css);
+@import url(../blocks/action-panel/__button-previous/action-panel__button-previous.css);
+@import url(../blocks/action-panel/__button/action-panel__button.css);
+@import url(../blocks/action-panel/__previous-img/action-panel__previous-img.css);
+@import url(../blocks/action-panel/action-panel.css);
+@import url(../blocks/action-panel/__next-img/action-panel__next-img.css);
+@import url(../blocks/action-panel/__button-next-inactive/action-panel__button-next-inactive.css);
+@import url(../blocks/action-panel/__next-img-inactive/action-panel__next-img-inactive.css);
+
 /* aside */
 @import url(../blocks/aside/__accordion/aside__accordion.css);
 @import url(../blocks/aside/__panel/aside__panel.css);
@@ -40,4 +50,3 @@
 @import url(../blocks/aside/__list/aside__list.css);
 @import url(../blocks/aside/__task/aside__task.css);
 @import url(../blocks/aside/__task/_check-mark/aside__task_check-mark.css);
-

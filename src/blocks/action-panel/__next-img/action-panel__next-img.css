@@ -1,0 +1,6 @@
+.action-panel__next-img {
+    margin-left: 12px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../../images/arrow-white.svg);
+}
