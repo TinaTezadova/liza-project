@@ -9,6 +9,8 @@ const form = document.querySelector('.test')
 const testContainer = document.querySelector('.test__list');
 const testItemTemplate = document.querySelector('#test__item-template').content;
 const optionsItemTemplate = document.querySelector('#answer-options__item-template').content;
+const testResultFailedTemplate = document.querySelector('#result-failed').content;
+const testResultSuccessTemplate = document.querySelector('#result-success').content;
 const initialQuestions = [
     {
         qustion: '1. В каких случаях перспективно применение следовых кинологических расчётов?',
@@ -136,7 +138,9 @@ const insertInitialQuestions = () => {
 const handleRetryButtonClick = (event) => {
     event.preventDefault();
     const button = document.querySelector('.test__button');
+    const resultForms = Array.from(document.querySelectorAll('.result'));
     testContainer.innerHTML = '';
+    resultForms.forEach((item) => item.remove());
     button.remove();
     insertInitialQuestions();
     insertInitialButton();
@@ -145,12 +149,14 @@ const handleRetryButtonClick = (event) => {
 
 
 const checkTestResult = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const testItems = Array.from(document.querySelector('.test__list').children);
     const button = document.querySelector('.test__button');
+    const resultFailedForm = testResultFailedTemplate.querySelector('.result').cloneNode(true);
+    const resultSuccessForm = testResultSuccessTemplate.querySelector('.result').cloneNode(true);
     const inputsFirstQuestion = Array.from(testItems[0].querySelectorAll('.answer-options__checkbox-input'));
     const inputsSecondQuestion = Array.from(testItems[1].querySelectorAll('.answer-options__checkbox-input'));
-    const inputs = [...inputsFirstQuestion, ...inputsSecondQuestion]
+    const inputs = [...inputsFirstQuestion, ...inputsSecondQuestion];
     const testSuccess = (inputsFirstQuestion.filter((item) => item.checked).length > 1) 
     && (inputsSecondQuestion.filter((item) => item.checked && item.value === '2').length > 0);
 
@@ -179,14 +185,15 @@ const checkTestResult = (event) => {
             }
         });
         if(testSuccess) {
+            testContainer.after(resultSuccessForm);
             form.replaceChild(renderFormButton(retryButtonSuccessTemplate, false, handleRetryButtonClick, ['test__button_success']), button);
         }
         else {
+            testContainer.after(resultFailedForm);
             form.replaceChild(renderFormButton(retryButtonFailedTemplate, false, handleRetryButtonClick,), button);
         }
         
-
-}
+};
 
 const renderFormButton = (children, disabled, callback, classes= []) => {
     const newButton = document.createElement('button');
@@ -195,7 +202,7 @@ const renderFormButton = (children, disabled, callback, classes= []) => {
     newButton.innerHTML = children;
     newButton.addEventListener('click', callback);
     disabled ? newButton.setAttribute('disabled', 'true') : newButton.removeAttribute('disabled');
-    return newButton
+    return newButton;
 };
 
 
