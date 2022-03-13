@@ -26,25 +26,39 @@
             </nav>
         </header>
         <nav class="breadcrumbs">
-            <li class="breadcrumb">
-                <a href="#" class="breadcrumb-base">Курсы</a>
+            <li class="breadcrumbs__breadcrumb">
+                <a href="#" class="breadcrumbs__breadcrumb-base">Курсы</a>
                 <img src="./src/images/icon-vector.svg" alt=">">
             </li>
-            <li class="breadcrumb">
-                <a href="#" class="breadcrumb-base">Кинологическое направление</a>
+            <li class="breadcrumbs__breadcrumb">
+                <a href="#" class="breadcrumbs__breadcrumb-base">Кинологическое направление</a>
                 <img src="./src/images/icon-vector.svg" alt=">">
             </li>
-            <li class="breadcrumb">
-                <a href="#" class="breadcrumb-base">Работа &laquo;второго номера&raquo; совместно со следовым кинологическим расчётом</a>
+            <li class="breadcrumbs__breadcrumb">
+                <a href="#" class="breadcrumbs__breadcrumb-base">Работа &laquo;второго номера&raquo; совместно со следовым кинологическим расчётом</a>
                 <img src="./src/images/icon-vector.svg" alt=">">
             </li>
-            <li class="breadcrumb">
-                <a href="#" class="breadcrumb-base breadcrumb-base_active">Тест</a>
+            <li class="breadcrumbs__breadcrumb">
+                <a href="#" class="breadcrumbs__breadcrumb-base breadcrumbs__breadcrumb-base_active">Тест</a>
             </li>
         </nav>
         <main class="main-content">
             <div class="content-block">
                 <h2 class="content-block__title">Тест</h2>
+                <p class="content-block__desription">Что мы&nbsp;узнали об&nbsp;особенностях привлечения следовых
+                    расчётов на&nbsp;ПСР и&nbsp;особенностях взаимодействия между участниками ППС</p>
+                <ul class="content-block__table">
+                    <li class="content-block__table-row-result">
+                        <p class="content-block__table-text">Проходной бал:</p><p class="content-block__table-value">80%</p>
+                    </li>
+                    <li class="content-block__table-row-try">
+                        <p class="content-block__table-text">Количество попыток:</p><p class="content-block__table-value">3</p>
+                    </li>
+                    <li class="content-block__table-row-time">
+                        <p class="content-block__table-text">Срок сдачи:</p><p class="content-block__table-value">22.02.2022 г. 16:20 (GMT+3)</p>
+                    </li>
+                </ul>                
+                    <a href="./test.html" class="content-block__button">Начать тест</a>               
             </div>
             <div class="action-panel">
                 <a href="./index.html" class="action-panel__button action-panel__button-previous">
@@ -55,8 +69,41 @@
                 </a>
             </div>
         </main>
-        <aside style="grid-area: sidebar;"></aside>
+        <aside class="aside">
+            <h2 class="aside__title">Содержание</h2>
+            <button class="aside__accordion">1. В каких случаях перспективно применение следовых кинологических расчётов</button>
+            <button class="aside__accordion">2. Необходимые обеспечительные меры для успешного применения следовых (розыскных собак)</button>
+            <button class="aside__accordion aside__accordion_slide">3. Особенности привлечения следовых расчётов на ПСР и особенности взаимодействия</button>
+            <div class="aside__panel">
+                <ul class="aside__list">
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Урок</li>
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Вебинар</li>
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Урок</li>
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Видео</li>
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Тест</li>
+                </ul>
+            </div>
+            <button class="aside__accordion aside__accordion_slide">4. Корректная постановка задачи кинологу и особенности её исполнения</button>
+            <div class="aside__panel">
+                <ul class="aside__list">
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Вебинар</li>
+                </ul>
+            </div>
+            <button class="aside__accordion aside__accordion_slide">5. Работа «второго номера» совместно со следовым кинологическим расчётом</button>
+            <div class="aside__panel">
+                <ul class="aside__list">
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Дрессировка поисково-спасательных собак</li>
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Вебинар</li>
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Урок</li>
+                    <li class="aside__task"><img src="./src/images/checkmark.svg" class="aside__task_check-mark">Видео</li>
+                    <li class="aside__task"><img src="./src/images/test.svg" class="aside__task_check-mark">Тест</li>
+                </ul>
+            </div>
+            <button class="aside__accordion">6. Оценка качества и особенности анализа результата проделанной следовым кинологическим расчётом работы</button>
+            <button class="aside__accordion">7. Особенности и пределы использования РПРС ом полученной в ходе применения специальной следовой собаки информации в целях успешного разрешения поисков</button>
+        </aside>
     </div>
-    
+
+    <script src="./src/scripts/accordion.js"></script>  
 </body>
 </html>

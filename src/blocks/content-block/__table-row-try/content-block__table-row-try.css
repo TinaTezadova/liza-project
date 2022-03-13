@@ -1,0 +1,11 @@
+.content-block__table-row-try {
+    list-style: none;
+    background-image: url(../../../images/try.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}

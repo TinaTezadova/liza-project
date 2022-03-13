@@ -1,0 +1,17 @@
+.aside__task {
+    list-style: none;
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #212329;
+    align-items: flex-start;
+}
+
+.aside__task:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+.aside__task:first-of-type {
+    margin-top: 32px;
+}

@@ -22,9 +22,9 @@
 @import url(../blocks/menu/__link/_active/menu__link_active.css);
 
 /* breadcrumbs */
-@import url(../blocks/breadcrumbs-base/breadcrumb-base.css);
-@import url(../blocks/breadcrumbs-base/_active/breadcrumb-base_active.css);
-@import url(../blocks/breadcrumb/breadcrumb.css);
+@import url(../blocks/breadcrumbs/__breadcrumb/breadcrumbs__breadcrumb.css);
+@import url(../blocks/breadcrumbs/__breadcrumbs-base/breadcrumbs__breadcrumb-base.css);
+@import url(../blocks/breadcrumbs/__breadcrumbs-base/_active/breadcrumbs__breadcrumb-base_active.css);
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
 
 /* action-panel*/
@@ -36,3 +36,13 @@
 @import url(../blocks/action-panel/__next-img/action-panel__next-img.css);
 @import url(../blocks/action-panel/__button-next-inactive/action-panel__button-next-inactive.css);
 @import url(../blocks/action-panel/__next-img-inactive/action-panel__next-img-inactive.css);
+
+/* aside */
+@import url(../blocks/aside/__accordion/aside__accordion.css);
+@import url(../blocks/aside/__panel/aside__panel.css);
+@import url(../blocks/aside/__title/aside__title.css);
+@import url(../blocks/aside/aside.css);
+@import url(../blocks/aside/__accordion/_active/aside__accordion_active.css);
+@import url(../blocks/aside/__list/aside__list.css);
+@import url(../blocks/aside/__task/aside__task.css);
+@import url(../blocks/aside/__task/_check-mark/aside__task_check-mark.css);
