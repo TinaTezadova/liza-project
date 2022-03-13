@@ -10,6 +10,13 @@
 @import url(../blocks/content-block/content-block.css);
 @import url(../blocks/content-block/__header/content-block__header.css);
 @import url(../blocks/content-block/__title/content-block__title.css);
+@import url(../blocks/content-block/__desription/content-block__desription.css);
+@import url(../blocks/content-block/__table/content-block__table.css);
+@import url(../blocks/content-block/__table-row-try/content-block__table-row-try.css);
+@import url(../blocks/content-block/__table-row-result/content-block__table-row-result.css);
+@import url(../blocks/content-block/__table-row-time/content-block__table-row-time.css);
+@import url(../blocks/content-block/__table-text/content-block__table-text.css);
+@import url(../blocks/content-block/__table-value/content-block__table-value.css);
 @import url(../blocks/content-block/__link/content-block__link.css);
 
 @import url(../blocks/header/header.css);
