@@ -1,0 +1,12 @@
+.test__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #E6E7EB;
+}
+
+.test__item:last-child {
+    border-bottom: none;
+    margin-bottom: 0px;
+}

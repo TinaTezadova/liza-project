@@ -1,0 +1,4 @@
+.answer-options__checkbox-state {
+    display: flex;
+    cursor: pointer;
+}

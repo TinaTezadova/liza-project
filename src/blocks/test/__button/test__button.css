@@ -1,0 +1,23 @@
+.test__button {
+    display: flex;
+    gap: 8px;
+    box-sizing: border-box;
+    padding: 12px 24px;
+    background-color: #FF6600;
+    border-radius: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    align-self: center;
+    border: none;
+}
+
+.test__button:disabled {
+    background-color: #E6E7EB;
+    cursor: default;
+    color: #9397A3;
+}

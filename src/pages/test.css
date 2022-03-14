@@ -11,6 +11,12 @@
 @import url(../blocks/content-block/__header/content-block__header.css);
 @import url(../blocks/content-block/__title/content-block__title.css);
 @import url(../blocks/content-block/__link/content-block__link.css);
+@import url(../blocks/result/result.css);
+@import url(../blocks/result/__title/result__title.css);
+@import url(../blocks/result/__subtitle/result__subtitle.css);
+@import url(../blocks/result/__subtitle/_description/result__subtitle_description.css);
+@import url(../blocks/result/_theme/result_theme_fail.css);
+@import url(../blocks/result/_theme/result_theme_success.css);
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__link/header__link.css);
@@ -26,6 +32,28 @@
 @import url(../blocks/breadcrumbs/__breadcrumbs-base/breadcrumbs__breadcrumb-base.css);
 @import url(../blocks/breadcrumbs/__breadcrumbs-base/_active/breadcrumbs__breadcrumb-base_active.css);
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
+
+
+@import url(../blocks/test/test.css);
+@import url(../blocks/test/__list/test__list.css);
+@import url(../blocks/test/__item/test__item.css);
+@import url(../blocks/test/__button/test__button.css);
+@import url(../blocks/test/__button/_success/test__button_success.css);
+@import url(../blocks/test/__button/_disabled/test__button_disabled.css);
+@import url(../blocks/test/__question/test__question.css);
+
+@import url(../blocks/answer-options/answer-options.css);
+@import url(../blocks/answer-options/__list/answer-options__list.css);
+@import url(../blocks/answer-options/__item/answer-options__item.css);
+@import url(../blocks/answer-options/__img/answer-options__img.css);
+@import url(../blocks/answer-options/__checkbox-input/answer-options__checkbox-input.css);
+@import url(../blocks/answer-options/__label/answer-options__label.css);
+@import url(../blocks/answer-options/__label/_checked/answer-options__label_checked.css);
+@import url(../blocks/answer-options/__checkbox-state/answer-options__checkbox-state.css);
+@import url(../blocks/answer-options/__checkbox/answer-options__checkbox.css);
+@import url(../blocks/answer-options/__item/_result/answer-options__item_result.css);
+@import url(../blocks/answer-options/__label/_success/answer-options__label_success.css);
+@import url(../blocks/answer-options/__label/_failed/answer-options__label_failed.css);
 
 /* action-panel*/
 @import url(../blocks/action-panel/__button-next/action-panel__button-next.css);
