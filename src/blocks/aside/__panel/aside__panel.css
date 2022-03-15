@@ -1,6 +1,9 @@
 .aside__panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
     margin: 0;
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity 0.3s linear, max-height 0.2s ease-out;
 }

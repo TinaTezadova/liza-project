@@ -30,6 +30,7 @@
 @import url(../blocks/aside/__task-check-mark/aside__task-check-mark.css);
 @import url(../blocks/aside/__task/_target/aside__task_target.css);
 @import url(../blocks/aside/__link/aside__link.css);
+@import url(../blocks/aside/__panel/_visible/aside__panel_visible.css);
 
 @import url(../blocks/main-content/main-content.css);
 

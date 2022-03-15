@@ -1,0 +1,5 @@
+.aside__panel_visible {
+    visibility: visible;
+    opacity: 1;
+    transition: overflow 0.5s, opacity .5s;
+}
