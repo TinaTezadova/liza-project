@@ -15,7 +15,7 @@ const nextButton = document.querySelector('.action-panel__button-next_inactive')
 const nextButtonImg = document.querySelector('.action-panel__next-img_inactive');
 const initialQuestions = [
     {
-        qustion: '1. В каких случаях перспективно применение следовых кинологических расчётов?',
+        question: '1. В каких случаях перспективно применение следовых кинологических расчётов?',
         checkboxType: 'checkbox',
         options: [
             {
@@ -37,7 +37,7 @@ const initialQuestions = [
     },
 
     {
-        qustion: '2. С какого возраста следует начинать дрессировку по курсу ПСС?',
+        question: '2. С какого возраста следует начинать дрессировку по курсу ПСС?',
         checkboxType: 'radio',
         options: [
             {
