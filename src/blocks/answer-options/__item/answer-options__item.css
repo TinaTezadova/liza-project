@@ -1,5 +1,6 @@
 .answer-options__item {
     margin-bottom: 16px;
+    display: flex;
 }
 
 .answer-options__item:last-child {

@@ -11,9 +11,11 @@ const testItemTemplate = document.querySelector('#test__item-template').content;
 const optionsItemTemplate = document.querySelector('#answer-options__item-template').content;
 const testResultFailedTemplate = document.querySelector('#result-failed').content;
 const testResultSuccessTemplate = document.querySelector('#result-success').content;
+const nextButton = document.querySelector('.action-panel__button-next_inactive');
+const nextButtonImg = document.querySelector('.action-panel__next-img_inactive');
 const initialQuestions = [
     {
-        qustion: '1. В каких случаях перспективно применение следовых кинологических расчётов?',
+        question: '1. В каких случаях перспективно применение следовых кинологических расчётов?',
         checkboxType: 'checkbox',
         options: [
             {
@@ -35,7 +37,7 @@ const initialQuestions = [
     },
 
     {
-        qustion: '2. С какого возраста следует начинать дрессировку по курсу ПСС?',
+        question: '2. С какого возраста следует начинать дрессировку по курсу ПСС?',
         checkboxType: 'radio',
         options: [
             {
@@ -56,6 +58,7 @@ const initialQuestions = [
         ]
     },
 ];
+let testFailedCount = 0;
 
 const handleCheckboxClick = (event, answerOptionsList) => {
     const label = event.target.nextSibling.nextSibling.children[1];
@@ -189,8 +192,16 @@ const checkTestResult = (event) => {
             form.replaceChild(renderFormButton(retryButtonSuccessTemplate, false, handleRetryButtonClick, ['test__button_success']), button);
         }
         else {
+            testFailedCount++;
             testContainer.after(resultFailedForm);
             form.replaceChild(renderFormButton(retryButtonFailedTemplate, false, handleRetryButtonClick,), button);
+            if(testFailedCount === 3) {
+                nextButton.classList.add('action-panel__button-next');
+                nextButton.classList.remove('action-panel__button-next_inactive');
+                nextButton.href = './course-failed.html';
+                nextButtonImg.classList.add('action-panel__next-img')
+                nextButtonImg.classList.remove('action-panel__next-img_inactive')
+            }
         }
         
 };
