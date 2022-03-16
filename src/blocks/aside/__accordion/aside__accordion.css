@@ -1,7 +1,7 @@
 .aside__accordion {
     background-color: transparent;
     cursor: pointer;
-    padding-top: 32px;
+    padding: 32px 0 0 0;
     margin-top: 33px;
     width: 100%;
     border: none;

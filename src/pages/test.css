@@ -73,4 +73,7 @@
 @import url(../blocks/aside/__accordion/_active/aside__accordion_active.css);
 @import url(../blocks/aside/__list/aside__list.css);
 @import url(../blocks/aside/__task/aside__task.css);
-@import url(../blocks/aside/__task/_check-mark/aside__task_check-mark.css);
+@import url(../blocks/aside/__task-check-mark/aside__task-check-mark.css);
+@import url(../blocks/aside/__task/_target/aside__task_target.css);
+@import url(../blocks/aside/__link/aside__link.css);
+@import url(../blocks/aside/__panel/_visible/aside__panel_visible.css);
