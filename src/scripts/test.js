@@ -13,6 +13,7 @@ const testResultFailedTemplate = document.querySelector('#result-failed').conten
 const testResultSuccessTemplate = document.querySelector('#result-success').content;
 const nextButton = document.querySelector('.action-panel__button-next_inactive');
 const nextButtonImg = document.querySelector('.action-panel__next-img_inactive');
+const prevButton = document.querySelector('.action-panel__button-previous');
 const initialQuestions = [
     {
         question: '1. В каких случаях перспективно применение следовых кинологических расчётов?',
@@ -160,53 +161,54 @@ const checkTestResult = (event) => {
     const inputsFirstQuestion = Array.from(testItems[0].querySelectorAll('.answer-options__checkbox-input'));
     const inputsSecondQuestion = Array.from(testItems[1].querySelectorAll('.answer-options__checkbox-input'));
     const inputs = [...inputsFirstQuestion, ...inputsSecondQuestion];
-    const testSuccess = (inputsFirstQuestion.filter((item) => item.checked).length > 1) 
-    && (inputsSecondQuestion.filter((item) => item.checked && item.value === '2').length > 0);
+    const testSuccess = (inputsFirstQuestion.filter((item) => item.checked).length > 1)
+        && (inputsSecondQuestion.filter((item) => item.checked && item.value === '2').length > 0);
 
-        inputs.forEach((item) => {
-            const img = item.nextSibling.nextSibling.querySelector('.answer-options__img');
-            const label = item.nextSibling.nextSibling.querySelector('.answer-options__label');
+    inputs.forEach((item) => {
+        const img = item.nextSibling.nextSibling.querySelector('.answer-options__img');
+        const label = item.nextSibling.nextSibling.querySelector('.answer-options__label');
 
-            item.setAttribute('disabled', 'true');
-            if (item.checked) {
-                if(item.getAttribute('success') === 'true') {
-                    img.src = './src/images/success-icon.svg';
-                    label.classList.add('answer-options__label_success');
-                }
-                else {
-                    img.src = './src/images/faild-icon.svg';
-                    label.classList.add('answer-options__label_failed');
-                }
+        item.setAttribute('disabled', 'true');
+        if (item.checked) {
+            if (item.getAttribute('success') === 'true') {
+                img.src = './src/images/success-icon.svg';
+                label.classList.add('answer-options__label_success');
             }
             else {
-                if(item.getAttribute('success') === 'true') {
-                    img.src = './src/images/success.svg';
-                }
-                else {
-                    img.src = './src/images/error.svg';
-                }
+                img.src = './src/images/faild-icon.svg';
+                label.classList.add('answer-options__label_failed');
             }
-        });
-        if(testSuccess) {
-            testContainer.after(resultSuccessForm);
-            form.replaceChild(renderFormButton(retryButtonSuccessTemplate, false, handleRetryButtonClick, ['test__button_success']), button);
         }
         else {
-            testFailedCount++;
-            testContainer.after(resultFailedForm);
-            form.replaceChild(renderFormButton(retryButtonFailedTemplate, false, handleRetryButtonClick,), button);
-            if(testFailedCount === 3) {
-                nextButton.classList.add('action-panel__button-next');
-                nextButton.classList.remove('action-panel__button-next_inactive');
-                nextButton.href = './course-failed.html';
-                nextButtonImg.classList.add('action-panel__next-img')
-                nextButtonImg.classList.remove('action-panel__next-img_inactive')
+            if (item.getAttribute('success') === 'true') {
+                img.src = './src/images/success.svg';
+            }
+            else {
+                img.src = './src/images/error.svg';
             }
         }
-        
+    });
+    if (testSuccess) {
+        testContainer.after(resultSuccessForm);
+        form.replaceChild(renderFormButton(retryButtonSuccessTemplate, false, handleRetryButtonClick, ['test__button_success']), button);
+        prevButton.href = './index.html'
+    }
+    else {
+        testFailedCount++;
+        testContainer.after(resultFailedForm);
+        form.replaceChild(renderFormButton(retryButtonFailedTemplate, false, handleRetryButtonClick,), button);
+        if (testFailedCount === 3) {
+            nextButton.classList.add('action-panel__button-next');
+            nextButton.classList.remove('action-panel__button-next_inactive');
+            nextButton.href = './course-failed.html';
+            nextButtonImg.classList.add('action-panel__next-img')
+            nextButtonImg.classList.remove('action-panel__next-img_inactive')
+        }
+    }
+
 };
 
-const renderFormButton = (children, disabled, callback, classes= []) => {
+const renderFormButton = (children, disabled, callback, classes = []) => {
     const newButton = document.createElement('button');
     newButton.type = 'submit';
     newButton.classList.add('test__button', ...classes);
