@@ -131,6 +131,16 @@ function createQuestionItem(question) {
 
 };
 
+const renderFormButton = (children, disabled, callback, classes = []) => {
+    const newButton = document.createElement('button');
+    newButton.type = 'submit';
+    newButton.classList.add('test__button', ...classes);
+    newButton.innerHTML = children;
+    newButton.addEventListener('click', callback);
+    disabled ? newButton.setAttribute('disabled', 'true') : newButton.removeAttribute('disabled');
+    return newButton;
+};
+
 const insertInitialButton = () => {
     testContainer.after(renderFormButton('Показать результат', true, checkTestResult, []));
 };
@@ -150,6 +160,14 @@ const handleRetryButtonClick = (event) => {
     insertInitialButton();
 
 };
+
+const setActiveNextButton = (href) => {
+    nextButton.classList.add('action-panel__button-next');
+    nextButton.classList.remove('action-panel__button-next_inactive');
+    nextButton.href = href;
+    nextButtonImg.classList.add('action-panel__next-img')
+    nextButtonImg.classList.remove('action-panel__next-img_inactive')
+}
 
 
 const checkTestResult = (event) => {
@@ -191,31 +209,18 @@ const checkTestResult = (event) => {
     if (testSuccess) {
         testContainer.after(resultSuccessForm);
         form.replaceChild(renderFormButton(retryButtonSuccessTemplate, false, handleRetryButtonClick, ['test__button_success']), button);
-        prevButton.href = './index.html'
+        setActiveNextButton('./course-success.html');
+        prevButton.href = './index.html';
     }
     else {
         testFailedCount++;
         testContainer.after(resultFailedForm);
         form.replaceChild(renderFormButton(retryButtonFailedTemplate, false, handleRetryButtonClick,), button);
         if (testFailedCount === 3) {
-            nextButton.classList.add('action-panel__button-next');
-            nextButton.classList.remove('action-panel__button-next_inactive');
-            nextButton.href = './course-failed.html';
-            nextButtonImg.classList.add('action-panel__next-img')
-            nextButtonImg.classList.remove('action-panel__next-img_inactive')
+            setActiveNextButton('./course-failed.html')
         }
     }
 
-};
-
-const renderFormButton = (children, disabled, callback, classes = []) => {
-    const newButton = document.createElement('button');
-    newButton.type = 'submit';
-    newButton.classList.add('test__button', ...classes);
-    newButton.innerHTML = children;
-    newButton.addEventListener('click', callback);
-    disabled ? newButton.setAttribute('disabled', 'true') : newButton.removeAttribute('disabled');
-    return newButton;
 };
 
 
