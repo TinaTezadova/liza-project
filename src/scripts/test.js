@@ -161,7 +161,7 @@ const handleRetryButtonClick = (event) => {
 
 };
 
-const setActivNextButton = (href) => {
+const setActiveNextButton = (href) => {
     nextButton.classList.add('action-panel__button-next');
     nextButton.classList.remove('action-panel__button-next_inactive');
     nextButton.href = href;
@@ -209,7 +209,7 @@ const checkTestResult = (event) => {
     if (testSuccess) {
         testContainer.after(resultSuccessForm);
         form.replaceChild(renderFormButton(retryButtonSuccessTemplate, false, handleRetryButtonClick, ['test__button_success']), button);
-        setActivNextButton('./course-success.html');
+        setActiveNextButton('./course-success.html');
         prevButton.href = './index.html';
     }
     else {
@@ -217,7 +217,7 @@ const checkTestResult = (event) => {
         testContainer.after(resultFailedForm);
         form.replaceChild(renderFormButton(retryButtonFailedTemplate, false, handleRetryButtonClick,), button);
         if (testFailedCount === 3) {
-            setActivNextButton('./course-failed.html')
+            setActiveNextButton('./course-failed.html')
         }
     }
 
