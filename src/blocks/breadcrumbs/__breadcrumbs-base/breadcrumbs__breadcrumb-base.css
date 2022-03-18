@@ -6,3 +6,7 @@
     text-decoration: none;
     position: relative;
 }
+
+.breadcrumbs__breadcrumb-base:hover {
+    opacity: 0.8;
+}
