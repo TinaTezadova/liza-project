@@ -1,4 +1,4 @@
-const accordionItems = document.querySelectorAll(".aside__accordion_slide");
+const accordionItems = document.querySelectorAll(".aside__accordion");
 const defaultActiveBlocks = document.querySelectorAll('.aside__accordion_active');
 
 const openPanelBlock = (panel) => {

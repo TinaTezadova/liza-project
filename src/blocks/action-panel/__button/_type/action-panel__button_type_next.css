@@ -1,6 +1,6 @@
-.action-panel__button-next_inactive {
-    color: #9397A3;
-    background-color: #E6E7EB;
+.action-panel__button_type_next {
+    background-color: #FF6600;
+    color: #fff;
     border: none;
     display: flex;
     align-items: center;

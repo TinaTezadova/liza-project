@@ -20,14 +20,13 @@
 @import url(../blocks/menu/__link/_active/menu__link_active.css);
 
 /* action-panel*/
-@import url(../blocks/action-panel/__button-next/action-panel__button-next.css);
-@import url(../blocks/action-panel/__button-previous/action-panel__button-previous.css);
 @import url(../blocks/action-panel/__button/action-panel__button.css);
-@import url(../blocks/action-panel/__previous-img/action-panel__previous-img.css);
 @import url(../blocks/action-panel/action-panel.css);
-@import url(../blocks/action-panel/__next-img/action-panel__next-img.css);
-@import url(../blocks/action-panel/__button-next/_inactive/action-panel__button-next_inactive.css);
-@import url(../blocks/action-panel/__next-img/_inactive/action-panel__next-img_inactive.css);
+@import url(../blocks/action-panel/__img/action-panel__img.css);
+@import url(../blocks/action-panel/__img/_type/action-panel__img_type_next.css);
+@import url(../blocks/action-panel/__img/_type/action-panel__img_type_prev.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_next.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_previous.css);
 
 /* aside */
 @import url(../blocks/aside/__accordion/aside__accordion.css);
