@@ -1,0 +1,12 @@
+.breadcrumbs__breadcrumb-base {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #212329;
+    text-decoration: none;
+    position: relative;
+}
+
+.breadcrumbs__breadcrumb-base:hover {
+    opacity: 0.8;
+}

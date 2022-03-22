@@ -1,0 +1,52 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+
+@import url(../blocks/root/root.css);
+@import url(../blocks/page/page.css);
+
+
+@import url(../blocks/main-content/main-content.css);
+
+@import url(../blocks/content-block/content-block.css);
+@import url(../blocks/content-block/__header/content-block__header.css);
+@import url(../blocks/content-block/__title/content-block__title.css);
+@import url(../blocks/success-or-fail/success-or-fail.css);
+@import url(../blocks/success-or-fail/__title/success-or-fail__title.css);
+@import url(../blocks/success-or-fail/__span/success-or-fail__span.css);
+@import url(../blocks/success-or-fail/__subtitle/success-or-fail__subtitle.css);
+@import url(../blocks/success-or-fail/__subtitle/_type/success-or-fail_type_subtitle.css);
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/menu/menu.css);
+@import url(../blocks/menu/__icon/menu__icon.css);
+@import url(../blocks/menu/__item/menu__item.css);
+@import url(../blocks/menu/__items/menu__items.css);
+@import url(../blocks/menu/__link/menu__link.css);
+@import url(../blocks/menu/__link/_active/menu__link_active.css);
+
+/* breadcrumbs */
+@import url(../blocks/breadcrumbs/__breadcrumb/breadcrumbs__breadcrumb.css);
+@import url(../blocks/breadcrumbs/__breadcrumbs-base/breadcrumbs__breadcrumb-base.css);
+@import url(../blocks/breadcrumbs/__breadcrumbs-base/_active/breadcrumbs__breadcrumb-base_active.css);
+@import url(../blocks/breadcrumbs/breadcrumbs.css);
+
+@import url(../blocks/action-panel/__button/action-panel__button.css);
+@import url(../blocks/action-panel/action-panel.css);
+@import url(../blocks/action-panel/__img/action-panel__img.css);
+@import url(../blocks/action-panel/__img/_type/action-panel__img_type_prev.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_next.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_previous.css);
+
+
+@import url(../blocks/aside/__accordion/aside__accordion.css);
+@import url(../blocks/aside/__panel/aside__panel.css);
+@import url(../blocks/aside/__title/aside__title.css);
+@import url(../blocks/aside/aside.css);
+@import url(../blocks/aside/__accordion/_active/aside__accordion_active.css);
+@import url(../blocks/aside/__list/aside__list.css);
+@import url(../blocks/aside/__task/aside__task.css);
+@import url(../blocks/aside/__task-check-mark/aside__task-check-mark.css);
+@import url(../blocks/aside/__task/_target/aside__task_target.css);
+@import url(../blocks/aside/__link/aside__link.css);
+@import url(../blocks/aside/__panel/_visible/aside__panel_visible.css);

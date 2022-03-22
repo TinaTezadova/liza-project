@@ -1,0 +1,5 @@
+.aside__panel_visible {
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 0.2s ease-out, opacity .5s;
+}

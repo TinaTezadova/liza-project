@@ -1,0 +1,14 @@
+.action-panel__button_type_previous {
+    color: #ff6600;
+    background-color: #fff;
+    border: 1.2px solid #E6E7EB;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-panel__button_type_previous:hover {
+    border: 1px #ff6600 solid;
+    transform: scale(1.008);
+}
