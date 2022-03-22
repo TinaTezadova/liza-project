@@ -11,9 +11,9 @@ const testItemTemplate = document.querySelector('#test__item-template').content;
 const optionsItemTemplate = document.querySelector('#answer-options__item-template').content;
 const testResultFailedTemplate = document.querySelector('#result-failed').content;
 const testResultSuccessTemplate = document.querySelector('#result-success').content;
-const nextButton = document.querySelector('.action-panel__button-next_inactive');
-const nextButtonImg = document.querySelector('.action-panel__next-img_inactive');
-const prevButton = document.querySelector('.action-panel__button-previous');
+const nextButton = document.querySelector('.action-panel__button_type_next');
+const nextButtonImg = document.querySelector('.action-panel__img_type_next');
+const prevButton = document.querySelector('.action-panel__button_type_previous');
 const initialQuestions = [
     {
         question: '1. В каких случаях перспективно применение следовых кинологических расчётов?',
@@ -122,7 +122,7 @@ const createOptionsItem = (option, checkboxType, answerOptionsList) => {
 function createQuestionItem(question) {
     const testItem = testItemTemplate.querySelector('.test__item').cloneNode(true);
     const testQuestion = testItem.querySelector('.test__question');
-    const answerOptionsList = testItem.querySelector('.answer-options__list');
+    const answerOptionsList = testItem.querySelector('.answer-options');
 
     testQuestion.textContent = question.question;
     question.options.forEach(el => answerOptionsList.append(createOptionsItem(el, question.checkboxType, answerOptionsList)));
@@ -142,6 +142,8 @@ const renderFormButton = (children, disabled, callback, classes = []) => {
 };
 
 const insertInitialButton = () => {
+    nextButton.classList.add('action-panel__button_inactive');
+    nextButtonImg.classList.add('action-panel__img_inactive');
     testContainer.after(renderFormButton('Показать результат', true, checkTestResult, []));
 };
 
@@ -162,11 +164,11 @@ const handleRetryButtonClick = (event) => {
 };
 
 const setActiveNextButton = (href) => {
-    nextButton.classList.add('action-panel__button-next');
-    nextButton.classList.remove('action-panel__button-next_inactive');
+    nextButton.classList.add('action-panel__button_type_next');
+    nextButton.classList.remove('action-panel__button_inactive');
     nextButton.href = href;
-    nextButtonImg.classList.add('action-panel__next-img')
-    nextButtonImg.classList.remove('action-panel__next-img_inactive')
+    nextButtonImg.classList.add('action-panel__img_type_next')
+    nextButtonImg.classList.remove('action-panel__img_inactive')
 }
 
 

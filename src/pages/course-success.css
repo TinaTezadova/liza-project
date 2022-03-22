@@ -13,7 +13,7 @@
 @import url(../blocks/success-or-fail/success-or-fail.css);
 @import url(../blocks/success-or-fail/__title/success-or-fail__title.css);
 @import url(../blocks/success-or-fail/__subtitle/success-or-fail__subtitle.css);
-@import url(../blocks/success-or-fail/__subtitle/_description/success-or-fail__subtitle_description.css);
+@import url(../blocks/success-or-fail/__subtitle/_type/success-or-fail_type_subtitle.css);
 
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__link/header__link.css);
@@ -31,14 +31,12 @@
 @import url(../blocks/breadcrumbs/breadcrumbs.css);
 
 /* action-panel*/
-@import url(../blocks/action-panel/__button-next/action-panel__button-next.css);
-@import url(../blocks/action-panel/__button-previous/action-panel__button-previous.css);
 @import url(../blocks/action-panel/__button/action-panel__button.css);
-@import url(../blocks/action-panel/__previous-img/action-panel__previous-img.css);
 @import url(../blocks/action-panel/action-panel.css);
-@import url(../blocks/action-panel/__next-img/action-panel__next-img.css);
-@import url(../blocks/action-panel/__button-next/_inactive/action-panel__button-next_inactive.css);
-@import url(../blocks/action-panel/__next-img/_inactive/action-panel__next-img_inactive.css);
+@import url(../blocks/action-panel/__img/action-panel__img.css);
+@import url(../blocks/action-panel/__img/_type/action-panel__img_type_prev.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_next.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_previous.css);
 
 /* aside */
 @import url(../blocks/aside/__accordion/aside__accordion.css);

@@ -14,7 +14,7 @@
 @import url(../blocks/result/result.css);
 @import url(../blocks/result/__title/result__title.css);
 @import url(../blocks/result/__subtitle/result__subtitle.css);
-@import url(../blocks/result/__subtitle/_description/result__subtitle_description.css);
+@import url(../blocks/result/__subtitle/_type/result__subtitle_type_description.css);
 @import url(../blocks/result/_theme/result_theme_fail.css);
 @import url(../blocks/result/_theme/result_theme_success.css);
 
@@ -43,7 +43,6 @@
 @import url(../blocks/test/__question/test__question.css);
 
 @import url(../blocks/answer-options/answer-options.css);
-@import url(../blocks/answer-options/__list/answer-options__list.css);
 @import url(../blocks/answer-options/__item/answer-options__item.css);
 @import url(../blocks/answer-options/__img/answer-options__img.css);
 @import url(../blocks/answer-options/__checkbox-input/answer-options__checkbox-input.css);
@@ -56,14 +55,15 @@
 @import url(../blocks/answer-options/__label/_failed/answer-options__label_failed.css);
 
 /* action-panel*/
-@import url(../blocks/action-panel/__button-next/action-panel__button-next.css);
-@import url(../blocks/action-panel/__button-previous/action-panel__button-previous.css);
 @import url(../blocks/action-panel/__button/action-panel__button.css);
-@import url(../blocks/action-panel/__previous-img/action-panel__previous-img.css);
 @import url(../blocks/action-panel/action-panel.css);
-@import url(../blocks/action-panel/__next-img/action-panel__next-img.css);
-@import url(../blocks/action-panel/__button-next/_inactive/action-panel__button-next_inactive.css);
-@import url(../blocks/action-panel/__next-img/_inactive/action-panel__next-img_inactive.css);
+@import url(../blocks/action-panel/__img/action-panel__img.css);
+@import url(../blocks/action-panel/__img/_type/action-panel__img_type_next.css);
+@import url(../blocks/action-panel/__img/_type/action-panel__img_type_prev.css);
+@import url(../blocks/action-panel/__img/_inactive/action-panel__img_inactive.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_next.css);
+@import url(../blocks/action-panel/__button/_type/action-panel__button_type_previous.css);
+@import url(../blocks/action-panel/__button/_inactive/action-panel__button_inactive.css);
 
 /* aside */
 @import url(../blocks/aside/__accordion/aside__accordion.css);
